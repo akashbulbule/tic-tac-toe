@@ -1,10 +1,7 @@
-> ***Game Playing:***
+#**N*N Tic Tac Toe using Minmax with alpha-beta pruning**
 
-**Akash Bulbule \#800836626**
 
-**Sibtanu Raha \#800813687**
-
-***Introduction:***
+##**Introduction:**
 
 We have implemented a tic tac toe game where a human user user can play
 the game with a computer. Tic tac toe is a two player game where a
@@ -14,7 +11,8 @@ succeeds in placing three respective marks in a horizontal, vertical, or
 diagonal row wins the game. If each player makes his best moves the game
 can result in a draw.
 
-**Objective:**
+
+##**Objective:**
 
 The objective of this project was to develop a tic tac toe game where
 the user can interactively play with the computer. In the beginning of
@@ -22,9 +20,10 @@ game the user is asked to choose the size of the board he wants to play
 in. Once he enters a number he is provided with a choice whether he
 wants to play the first move or not. Thereafter the game begins.
 
-**Algorithm:**
+##**Algorithm:**
 
-***Minimax:***
+
+####**Minimax:**
 
 The game is built on minimax algorithm. The idea of this algorithm is
 based on a back and forth between the two participating players. One of
@@ -37,7 +36,8 @@ In our case we have chosen the computer ( X player ) as the one trying
 to maximizing the score while the user (O player ) as the one trying to
 minimize the score.
 
-**Evaluation Function:**
+
+####**Evaluation Function:**
 
 To determine whether a certain board position is ‘good’ or ‘bad’ for a
 certain player we use an evaluation function. The function enables the
@@ -56,7 +56,8 @@ make.
 4.  If there are k O’s for 0&lt;k&lt;n and no X’s in a row, column or
     diagonal return -k^2^ for each such instance.
 
-**Alpha Beta Pruning: **
+
+####**Alpha Beta Pruning:**
 
 This is an optimization technique which helped saved us a lot of
 searching and increasing our maximal search depth. It stops completely
@@ -71,59 +72,26 @@ than computer’s best move so far, and so there is no need to further
 evaluate this move. Initially alpha has the value –infinity and beta has
 the value –infinity and we gradually update the values as we move on.
 
-**Minimax Cut off:**
+####**Minimax Cut off:**
 
 We have set the searching depth to be at 4.
 
-**Language: **
+
+##**Language:**
 
 This project has been developed using Python 2.7.3. We use two external
 packages pygame and easygui for the implementation of the graphical user
 interface.
 
-**How to run the program?**
+
+##**How to run the program?**
 
 1.  Install python 2.7.3 and the external packages ‘pygame’ and
     ‘easygui’
 
 2.  Type python FinalProj.py in the command prompt.
 
-**Division of Labor:**
-
-1.  **Sibtanu**: Implementation of 3\*3 minimax algorithim and alpha
-    beta pruning.
-
-2.  **Akash:** Extending 3\*3 to n\*n algorithm with 4 ply cutoff and
-    designing the evaluation function and GUI.
-
-**Snapshots of Output:**
-
-![](media/image1.png){width="7.204861111111111in"
-height="3.2083333333333335in"}
-
-![](media/image2.png){width="7.072916666666667in"
-height="3.3229166666666665in"}
-
-**Here the user is ‘O’ and the computer is ‘X’**
-
-![](media/image3.png){width="3.0208333333333335in"
-height="3.285416666666667in"}![](media/image4.png){width="3.0104166666666665in"
-height="3.272222222222222in"}![](media/image5.png){width="2.9791666666666665in"
-height="3.2916666666666665in"}![](media/image6.png){width="3.0104166666666665in"
-height="3.2847222222222223in"}
-
-![](media/image7.png){width="2.7708333333333335in"
-height="2.9791666666666665in"}![](media/image8.png){width="2.7604166666666665in"
-height="3.0208333333333335in"}
-
-![](media/image9.png){width="6.5in" height="3.25in"}
-
-![](media/image10.png){width="6.305555555555555in"
-height="1.2708333333333333in"}
-
-The number of nodes expanded in minmax per move of computer.
-
-**Future Improvements:**
+##**Future Improvements:**
 
 A possible future improvement can be increasing the depth cutoff from 4
 to a higher value. We have to take care the algorithm is optimized
